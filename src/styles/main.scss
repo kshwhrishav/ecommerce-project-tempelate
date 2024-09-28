@@ -1,0 +1,12 @@
+@import './variables';  // Variables for colors, fonts, etc.
+@import './mixins';     // Mixins and functions
+@import './base';       // Global resets and base styles
+@import './header';     // Header specific styles
+@import './footer';     // Footer specific styles
+@import './custom';
+
+
+.ecom-btn-primary{
+    color:black;
+    background-color: cornsilk;
+}
