@@ -1,0 +1,12 @@
+.ecom-product-main {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  
+    .ecom-add-product-btn {
+      display: flex;
+      justify-content: flex-end; /* Button aligns to the right */
+      margin-bottom: 16px; /* Add some space below the button */
+    }
+  }
+  

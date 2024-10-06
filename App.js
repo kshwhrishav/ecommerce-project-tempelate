@@ -13,23 +13,22 @@ import './src/styles/main.scss';
 
 const MainContent = () => {
     const { user, setUser } = useContext(UserContext);
-    const [loading, setLoading] = useState(true); // Loading state
+    const [loading, setLoading] = useState(true);
   
-    // Check for user in localStorage and set the context on initial load
     useEffect(() => {
       const storedUser = localStorage.getItem("user");
       if (storedUser) {
         setUser(JSON.parse(storedUser));
       }
-      setLoading(false); // Loading completed
+      setLoading(false);
     }, [setUser]);
   
     if (loading) {
-      return <div>Loading...</div>; // Optionally render a loading indicator
+      return <div>Loading...</div>;
     }
   
     if (!user || Object.keys(user).length === 0) {
-      return <Navigate to="/login" />; // Redirect to login if no user is logged in
+      return <Navigate to="/login" />;
     }
   
     return user.role === "admin" ? <AdminRoutes /> : <UserRoutes />;
@@ -43,13 +42,13 @@ const App = () => {
       <UserProvider>
         <div className="ecom-main">
           <Router>
-            <Header />
+            {/* <Header /> */}
             <Routes>
               <Route path="/login" element={<Login />} />
               <Route path="/*" element={<MainContent />} />
               <Route path="*" element={<Navigate to="/login" />} />
             </Routes>
-            <Footer />
+            {/* <Footer /> */}
           </Router>
         </div>
       </UserProvider>

@@ -4,9 +4,11 @@
 @import './header';     // Header specific styles
 @import './footer';     // Footer specific styles
 @import './custom';
+@import './productdashboard';
 
 
 .ecom-btn-primary{
     color:black;
     background-color: cornsilk;
+    border: 2px solid black; 
 }
