@@ -1,0 +1,9 @@
+.product-card-main{
+    width: 300px;
+    overflow:'scroll';
+    .product-card-box{
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}

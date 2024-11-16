@@ -12,14 +12,14 @@ function ProductCard({
   return (
     <Box>
       <Box>
-        <Card sx={{ width: 300, overflow:'scroll' }}>
+        <Card className="product-card-main">
           <CardMedia
             component="img"
             height="200"
             image={productImageUrl}
             alt="Sample Image"
           />
-          <CardContent>
+          <CardContent className="product-card-box">
             <Typography gutterBottom variant="h6" component="div">
               {productName}
             </Typography>
